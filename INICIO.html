@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANOS SOLIDARIAS DEL HORIZONTE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Azul claro de fondo */
+        }
+
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center;
+            text-align: center;
+            background-color: #00796b; /* Verde oscuro */
+            color: white; /* Texto blanco */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espacio entre el logo y el texto */
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-container h1, .title-container h2 {
+            margin: 0;
+            font-size: 24px; /* Tamaño del texto principal */
+        }
+
+        nav {
+            background-color: #004d40; /* Verde aún más oscuro */
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40;
+            color: #e0f7fa; /* Azul claro */
+            transform: scale(1.1);
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #00796b;
+            list-style-type: none;
+            padding: 10px;
+            border-radius: 5px;
+            top: 90%;
+            left: 0;
+            width: 200px;
+        }
+
+        .active {
+            background-color: #00796b; /* Verde oscuro */
+            color: white;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .content {
+            padding: 20px;
+            border: 2px solid #004d40; /* Borde sólido verde oscuro */
+            border-radius: 10px; /* Borde redondeado */
+            background-color: #fff; /* Fondo blanco */
+            margin: 20px; /* Margen exterior */
+        }
+
+        .content h2 {
+            color: #00796b; /* Verde oscuro */
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .images img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00796b;
+            color: white;
+        }
+
+        footer .derechos img {
+            max-width: 125px; /* Ajusta el tamaño de la imagen en el pie de página */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="C:/Users/Jeche123/Desktop/INDEX ONG/IMG/LOGO ONG.png" alt="Logo ONG">
+            <div class="title-container">
+                <h1>MANOS SOLIDARIAS DEL</h1>
+                <h2>HORIZONTE</h2>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="C:\Users\Jeche123\Desktop\INDEX ONG\INICIO.html#INICIO"class="active" >INICIO</a></li>
+            <li><a href="C:\Users\Jeche123\Desktop\INDEX ONG\ACERCA.html" >ACERCA DE NOSOTROS</a></li>
+            <li><a href="C:\Users\Jeche123\Desktop\INDEX ONG\COMO PUEDES AYUDAR.html">COMO PUEDES AYUDAR</a></li>
+	    <li><a href="C:\Users\Jeche123\Desktop\INDEX ONG\CONTACTOS.html">CONTACTOS</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Misión</h2>
+        <p>Trabajamos incansablemente para brindar apoyo, esperanza y oportunidades a aquellos que más lo necesitan, promoviendo la solidaridad, la inclusión y la transparencia. Nuestro objetivo es construir un futuro más justo, equitativo y sostenible para todos, donde cada persona tenga la oportunidad de alcanzar su máximo potencial.</p>
+        
+        <h2>Visión</h2>
+        <p>Inspiramos a los individuos a trabajar juntos para crear un mundo donde la dignidad humana, la igualdad y el respeto por la naturaleza y los demás sean los pilares de la sociedad. En un futuro cercano, aspiramos a un mundo donde estas valores sean fundamentales en la vida de cada persona.</p>
+         <img src="C:\Users\Jeche123\Desktop\INDEX ONG\IMG\Banners.png" alt="Banner" style="max-width: 100%; border-radius: 10px; margin-top: 20px;">
+    </div>
+    <footer>
+        <div class="derechos">
+            <img src="C:/Users/Jeche123/Desktop/INDEX ONG/IMG/LOGO ONG.png" alt="Logo Footer">
+            <p>&copy; 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

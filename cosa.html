@@ -1,0 +1,206 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ACCESO.aspx.vb" Inherits="PROYECTO_PROGRA.ACCESO" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ACCESO</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: url(Images/playa.gif);
+            background-size: cover;
+        }
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        .login-box h2 {
+            color: #fff;
+            text-align: center;
+        }
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: black; /* Color del texto dentro del TextBox */
+            margin-bottom: 30px;
+            outline: none;
+            background: white;
+            border: none;
+            border-bottom: 1px solid #fff;
+        }
+        .button {
+            width: calc(50% - 22px); /* Ajustar el ancho del botón */
+            padding: 10px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .lds-roller,
+        .lds-roller div,
+        .lds-roller div:after {
+            box-sizing: border-box;
+        }
+        .lds-roller {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-roller div {
+            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            transform-origin: 40px 40px;
+        }
+        .lds-roller div:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 7.2px;
+            height: 7.2px;
+            border-radius: 50%;
+            background: currentColor;
+            margin: -3.6px 0 0 -3.6px;
+        }
+        .lds-roller div:nth-child(1) {
+            animation-delay: -0.036s;
+        }
+        .lds-roller div:nth-child(1):after {
+            top: 62.62742px;
+            left: 62.62742px;
+        }
+        .lds-roller div:nth-child(2) {
+            animation-delay: -0.072s;
+        }
+        .lds-roller div:nth-child(2):after {
+            top: 67.71281px;
+            left: 56px;
+        }
+        .lds-roller div:nth-child(3) {
+            animation-delay: -0.108s;
+        }
+        .lds-roller div:nth-child(3):after {
+            top: 70.90963px;
+            left: 48.28221px;
+        }
+        .lds-roller div:nth-child(4) {
+            animation-delay: -0.144s;
+        }
+        .lds-roller div:nth-child(4):after {
+            top: 72px;
+            left: 40px;
+        }
+        .lds-roller div:nth-child(5) {
+            animation-delay: -0.18s;
+        }
+        .lds-roller div:nth-child(5):after {
+            top: 70.90963px;
+            left: 31.71779px;
+        }
+        .lds-roller div:nth-child(6) {
+            animation-delay: -0.216s;
+        }
+        .lds-roller div:nth-child(6):after {
+            top: 67.71281px;
+            left: 24px;
+        }
+        .lds-roller div:nth-child(7) {
+            animation-delay: -0.252s;
+        }
+        .lds-roller div:nth-child(7):after {
+            top: 62.62742px;
+            left: 17.37258px;
+        }
+        .lds-roller div:nth-child(8) {
+            animation-delay: -0.288s;
+        }
+        .lds-roller div:nth-child(8):after {
+            top: 56px;
+            left: 12.28719px;
+        }
+        @keyframes lds-roller {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .Loader {
+            background: black;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100000;
+            clip-path: circle(150% at 100% 0);
+            transition: clip-path 0.8s ease-in-out;
+        }
+
+        .Loader2 {
+            clip-path: circle(0% at 100% 0);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="login-box">
+        <h2>ACCESO</h2>
+        <form id="form1" runat="server">
+            <div class="user-box">
+                <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="textbox-label" ForeColor="White"></asp:Label>
+                <asp:TextBox ID="txtUsuario" runat="server" CssClass="textbox"></asp:TextBox>
+            </div>
+            <div class="user-box">
+                <asp:Label ID="Label2" runat="server" Text="Contraseña" CssClass="textbox-label" ForeColor="White"></asp:Label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="textbox"></asp:TextBox>
+            </div>
+            <asp:Button ID="btnIngresar" runat="server" CssClass="button" Text="INICIAR" OnClick="btnIngresar_Click" />
+            <asp:Button ID="btnSalir" runat="server" CssClass="button" Text="SALIR" OnClick="btnSalir_Click" />
+        </form>
+    </div>
+    <div class="lds-roller Loader" id="Loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        window.addEventListener("load", function(){
+            document.getElementById("Loader").classList.toggle("Loader2");
+        });
+    </script>
+</body>
+</html>
